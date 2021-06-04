@@ -1,0 +1,113 @@
+header{
+    background-color: $red;
+    width: 100%;
+    padding: 1.8rem 0;
+    .container.header{
+        display: flex;
+        justify-content: space-between;
+        @media screen and (min-width: 992px) {
+            justify-content: start;
+            align-items: center;
+        }
+        .nav-header{
+            .menu-toggler{
+                display: flex;
+                cursor: pointer;
+                position: relative;
+                top: 1rem;
+                padding: .6rem;
+                @media screen and (min-width: 992px) {
+                    display: none;
+                }
+                .line{
+                    position: relative;
+                    width: 3.3rem;
+                    height: .3rem;
+                    background-color: $white;
+                    display: inline-block;
+                    &::before, &::after{
+                        content: '';
+                        width: 3.3rem;
+                        height: .3rem;
+                        background-color: $white;
+                        position: absolute;
+                        left: 0;
+                        transition: all .2s ;
+                    }
+                    &::before{
+                        top: -1rem;
+                    }
+                    &::after{
+                        top: 1rem;
+                    }
+                }
+                &.active{
+                    .line{
+                        background-color: transparent ;
+                        &::before{
+                            top: 0;
+                            transform: rotate(135deg);
+                        }
+                        &::after{
+                            top: 0;
+                            transform: rotate(-135deg);
+                        }
+                    }
+                    
+                }
+            }
+            .menu-header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: $white;
+                padding: 3rem;
+                position: absolute;
+                right: -600rem;
+                top: 6.6rem;
+                transition: right .5s cubic-bezier(1, 0, 0, 1);
+                box-shadow: 0px 0px 2px 0px rgba(0, 0, 0 ,0.93);
+                width: 100%;
+                @media screen and (min-width: 992px) {
+                    position: static;
+                    margin-left: 3rem;
+                    display: flex;
+                    flex-direction: row;
+                    background: none;
+                    padding: 0;
+                    box-shadow: none;
+
+                }
+                .menu-item{
+                    margin: 1rem 0;
+                    transition: all .4s ease-in-out;
+                    &:hover{
+                        transform: scale(1.11);
+                    }
+                    @media screen and (min-width: 992px) {
+                        margin: 0 1rem;
+                    }
+                    a{
+                        font-size: 1.4rem;
+                        transition: all .1s ease-in-out;
+                        padding: 1.1rem;
+                        background: transparent;
+                        @media screen and (min-width: 992px) {
+                            color: $white;
+                        }
+                        &:hover{
+                            
+                            background: rgba($black, 0.6);
+                            color: $white;
+
+                        }
+                        
+                    }
+                }
+                &.opened{
+                    right: 0;
+                }
+            }
+        }
+    }
+}

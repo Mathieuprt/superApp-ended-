@@ -1,0 +1,54 @@
+footer{
+    padding: 6rem 0;
+    background: $red;
+    h2{
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+    form{
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        label{
+            color: $white;
+            display: block;
+            font-size: 1.6rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+        input, textarea{
+            border: none;
+            border-radius: 2px;
+            padding: 1rem;
+            margin-top: .5rem;
+            width: 100%;
+            resize: none;
+        }
+        .lignes{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+                width: 100%;
+                justify-content: start;
+                gap: 3rem;
+                margin-bottom: 2rem;
+                .left, .right{
+                    width: 50%;
+                }
+            }
+
+        }
+        .button-form{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

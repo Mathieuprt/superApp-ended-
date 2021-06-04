@@ -1,0 +1,58 @@
+.services{
+    margin: 4rem 0;
+    h2{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+    }
+    .services-area{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 5rem;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        @media screen and (min-width: 768px){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            align-items: baseline;
+        }
+        @media screen and (min-width: 992px){
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        .service-bloc{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .service-icon{
+                background-color: $red;
+                padding: 2rem;
+                border-radius: 50%;
+                width: 12rem;
+                height: 12rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all .4s ease-in-out;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                &:hover{
+                    background: $grey;
+                    transform: scale(1.11);
+                }
+            }
+            h3{
+                margin: 2rem 0 1.5rem 0 ;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+
+}

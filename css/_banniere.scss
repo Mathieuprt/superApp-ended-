@@ -1,0 +1,60 @@
+.banniere{
+    background-image: url('../photos/about.jpg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $white;
+    padding: 22rem 0;
+    .banniere-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .banniere-text{
+            h1{
+                margin-bottom: 3rem;
+            }
+            p{
+                font-size: 2rem;
+                @media screen and (min-width: 992px) {
+                    font-size: 2.4rem;
+                }
+            }
+
+        }
+        .banniere-boutons{
+            width: 70%;
+            margin: 4rem auto 0 auto;
+            border-top: 2px solid $white;
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2rem;
+                li{
+                    transition:  all .4s ease-in-out;
+                    &:hover{
+                        transform: scale(1.11);
+                    }
+                }
+                li:nth-child(2){
+                    margin: 0 5rem;
+                    .button-banniere::before{
+                        content: url(../icones/heart-shape-silhouette.svg);
+                    }
+                }
+                li:nth-child(3){
+                    
+                    .button-banniere::before{
+                        content: url(../icones/shopping-cart-black-shape.svg);
+                    }
+                }
+                
+  
+            }
+
+        }
+    }
+}
