@@ -315,6 +315,10 @@ footer form .button-form {
   max-width: 1200px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .team-header {
   padding: 12rem 0;
   background-image: url(../photos/team.jpg.png);
@@ -519,6 +523,9 @@ footer form .button-form {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
   background-color: #DD5555;
   width: 100%;
   padding: 1.8rem 0;
